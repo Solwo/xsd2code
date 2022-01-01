@@ -1,39 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0"
-                 xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011"
-                 xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Open.Xsd2Code.22fdc475-f463-47f5-95e8-8c8990c4081c"
-                  Version="1.1.1"
-                  Language="en-US"
-                  Publisher="-----" />
+        <Identity Id="Open.Xsd2Code.22fdc475-f463-47f5-95e8-8c8990c4081c" Version="1.1.1" Language="en-US" Publisher="-----" />
         <DisplayName>Open Xsd2Code</DisplayName>
         <Description xml:space="preserve">Open Xsd2Code - Visual Studio Extension</Description>
         <MoreInfo>https://github.com/kmpm/xsd2code</MoreInfo>
         <License>LICENCE.txt</License>
-
-
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,17.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)" >
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)" >
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0, 17.0)">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,17.0)" >
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[14.0,17.0)" >
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP"
-                    DisplayName="Microsoft .NET Framework"
-                    d:Source="Manual"
-                    Version="[4.5,)" />
-        <Dependency Id="Microsoft.VisualStudio.MPF.14.0"
-                    DisplayName="Visual Studio MPF 14.0"
-                    d:Source="Installed"
-                    Version="[14.0]" />
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
     </Dependencies>
-    <Assets>
-        <Asset Type="Microsoft.VisualStudio.VsPackage"
-               d:Source="Project"
-               d:ProjectName="%CurrentProject%"
-               Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    </Assets>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0]" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[14.0,18.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
 </PackageManifest>

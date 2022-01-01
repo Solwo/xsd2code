@@ -1,8 +1,7 @@
 Open Xsd2Code
 =============
-Modified fork of http://xsd2code.codeplex.com. 
-VSIX Integration in VS2015 to VS2019
-
+Modified fork of http://xsd2code.codeplex.com,  then https://github.com/kmpm/xsd2code
+VSIX Integration in VS2015 to VS2022
 
 Goals
 =====
